@@ -1,0 +1,7 @@
+FROM clarkezone/dart-pi-base
+ADD dart_run.sh /dart_runtime/
+RUN chmod 755 /dart_runtime/dart_run.sh
+EXPOSE 8080 8181 5858
+
+CMD []
+ENTRYPOINT ["sh", "/dart_runtime/dart_run.sh"]
